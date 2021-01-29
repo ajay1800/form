@@ -16,6 +16,7 @@
         }
         else{
             mail("ajayavasthi18@gmail.com","job application form",$message);
+            echo "form submitted sucessfully";
         }
     ?>
 </body>
