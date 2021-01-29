@@ -9,9 +9,14 @@
     <?php 
         $name = $_REQUEST["name"];
         $email = $_REQUEST["mail"];
-        $msg = $_REQUEST["msg"];
+        $message = $_REQUEST["msg"];
 
-        mail("ajayavasthi18@gmail.com","Job Application Form","$msg");
+        if(empty($name) || empty($email) || empty($message)){
+            echo "Please Fill All The Required Fields";
+        }
+        else{
+            mail("ajayavasthi18@gmail.com","job application form",$message);
+        }
     ?>
 </body>
 </html>
